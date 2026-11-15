@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Flight Computer - Software | Openvario</title>
+  <link rel="icon" href="../images/logo_0.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="../images/logo_0.png" alt="Openvario"></a>
+    <nav aria-label="Main"><ul class="top"><li><a href="index.html">Home</a></li><li><a href="flight-computer.html">The Flight Computer</a></li><li><a href="projects.html">Projects</a></li><li><a href="download.html">Download</a></li><li><a href="license.html">License</a></li></ul><ul class="sub"><li><a href="flight-computer.html">Overview</a></li><li><a href="mechanics.html">Mechanics</a></li><li><a href="hardware.html">Hardware</a></li><li><a href="software.html" aria-current="page">Software</a></li><li><a href="protocol.html">OpenVario Protocol</a></li></ul></nav>
+  </header>
+  <main>
+<h3>Software Overview</h3>
+<p>The flight computer uses several different software components. Some of these components are taken from external sources. We make sure however, that all software used in this project is licensed under <a href="http://en.wikipedia.org/wiki/Copyleft">copyleft</a> or <a href="http://en.wikipedia.org/wiki/Permissive_free_software_licence">permissive</a> terms.</p>
+<p>The OpenVario Flight computer is based on the <a href="http://linux-sunxi.org/Cubietech_Cubieboard2">Cubieboard 2</a> which integrates a Allwinner A20 SoC (Dualcore Cortex A7 processor). To get the best performance a Linux with DirectFB is used.</p>
+<p><img src="../images/image_flow.png"></p>
+<p>You can get a ready-to-use image for microSD-cards here: <a href="https://www.openvario.org/doku.php?id=projects:series_00:software:write_image_to_sd">Openvario-MicroSD-Image</a>. If you want to have deeper insights into the OpenVario-Software, check out the following sections:</p>
+<h4>Operating System</h4>
+<p><img src="../images/oe_logo.png" class="align-left">The operating system used is based on the Openembedded framework. For details see the <a href="http://www.openembedded.org/">Openembedded</a> website.</p>
+<h4>Sensor daemon</h4>
+<p><img src="../images/ov_sensord.jpg" class="align-left">The sensor daemon is a program accessing the hardware sensors and providing the data to the flight computer applications. If you are interested in the details inside, have a look at <a href="https://www.openvario.org/doku.php?id=projects:series_00:software:sensord">Sensor Daemon Details</a></p>
+<h4>Vario daemon</h4>
+<p>The vario daemon is a program being responsible for Audio-Vario and Speed to Fly, controlled by the XCSoar User Interface. Find more information about the <a href="https://www.openvario.org/doku.php?id=projects:series_00:software:variod">Variod</a>.</p>
+<h4>Menu Front - End</h4>
+<p><img src="../images/ov-m-main-200px.jpg" class="align-left">The main menu provides a simple user interface shown right after boot up of the system. It allows to start the flight computer, and provides some basic maintenance functionality. Learn more about the <a href="https://www.openvario.org/doku.php?id=projects:series_00:software:ov-menu">OV-Menu</a></p>
+<h4>Flight Computer Application XCSoar</h4>
+<p><img src="../images/ov_xcsoar.jpg" class="align-left">The excellent free glide computing software <a href="http://www.xcsoar.org/">XCSoar</a> is the heart of the software stack used in Openvario's Flight Computer. It provides a moving map, a vario application, and every conceivable functionality a sailplane pilot requires. Check it out, seriously.</p>
+<h4>NMEA-Communication</h4>
+<p>The communication between sensor daemon, vario daemon, XCSoar and external equipment (e.g. Flarm, IGC-Logger…) is realized using the NMEA-protocol. Find more detailed information about the <a href="https://www.openvario.org/doku.php?id=projects:series_00:software:nmea">NMEA-Protocol of OpenVario</a>.</p>
+  </main>
+</body>
+</html>

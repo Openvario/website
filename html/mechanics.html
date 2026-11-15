@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Flight Computer - Mechanics | Openvario</title>
+  <link rel="icon" href="../images/logo_0.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="../images/logo_0.png" alt="Openvario"></a>
+    <nav aria-label="Main"><ul class="top"><li><a href="index.html">Home</a></li><li><a href="flight-computer.html">The Flight Computer</a></li><li><a href="projects.html">Projects</a></li><li><a href="download.html">Download</a></li><li><a href="license.html">License</a></li></ul><ul class="sub"><li><a href="flight-computer.html">Overview</a></li><li><a href="mechanics.html" aria-current="page">Mechanics</a></li><li><a href="hardware.html">Hardware</a></li><li><a href="software.html">Software</a></li><li><a href="protocol.html">OpenVario Protocol</a></li></ul></nav>
+  </header>
+  <main>
+<h2>Mechanics</h2>
+<h3>3D Model</h3>
+<p><img src="../images/ov_back_housing_removed_color_1.png" class="align-left">Here you can see a nice 3-D model (donated by Tamás) of the OpenVario Flight Computer, showing the housing with the PCBs in situ, the outer cover is removed for better insight. This 3-D-pdf-model is very interesting for visualisation of the OpenVario Mechanics and can be downloaded here: <a href="ftp://ftp.openvario.org/Openvario_7in_assembly.pdf">Openvario 7" as 3D-PDF-Model</a> You can open it using the Adobe Reader X (most other pdf-readers won't work). There is a wide range of possibilities to measure dimensions, zoom, rotate, use a different illumination, transparency and much more. Check it out…</p>
+<h3>Housing</h3>
+<p><img src="../images/ov-housing.jpg" class="align-left">The housing is designed from aluminum sheet metal for easy manufacturing on hobby CNC machines. You have no CNC machine available? Ask one of your radio controlled model building friends, and chances are good he can point you to someone who knows someone… - you get it All main parts but the front frame are made from 1.5mm or 3mm aluminum sheet and have provisions for easy bending. On the backside it gives access to the Cubieboards' µSD card slot and USB connectors. On your desk with the lower cover removed, <a href="https://www.openvario.org/doku.php?id=projects:series_00:software:update">Ethernet</a> and HDMI ports can be accessed for development. The back of the housing allows easy implementation of additional connectors for extensions (like sensorboard and RJ45 board), not to forget the hose-connectors to the airplane's pressure system. More details about the housing and assembly are found in the <a href="https://www.openvario.org/doku.php?id=projects:series_00:assembly">assembly guide</a> and under <a href="https://www.openvario.org/doku.php?id=projects:series_00:build:housing">Preparing the housing</a></p>
+<h3>Tube connectors</h3>
+<p>The MS5611 pressure sensors used on the sensorboard have great performance and come at a very reasonable price, but unfortunately without barbed tube connectors</p>
+<p><img src="../images/img_0493_cr.jpg"></p>
+<p>Therefore we designed a POM-Block to be mounted on the Sensorboard-PCB, which has some threads for the three pressure barbs to connect to the airplane pressure system. Two chambers encapsulate the MS5611-Sensors for altitude and vario, and one hole goes through. Two brass tubes at the backside of the POM-Block are connected to the differential pressure sensor for airspeed via two short silicone hoses.</p>
+<p><img src="../images/pom_block_from_above_inside.png"></p>
+<p><img src="../images/pom_block_from_below_outside.png" class="align-left"></p>
+<p>The Block is made from some 1/2“ sheet of black POM, which has excellent machining characteristics and durability. Prepare the basic part as shown in the DXF, ream the 2.9mm holes for a slight press fit of 3mm brass tubes and cut M5 threads for the barbed tube connectors. Before you start sealing the POM-Block, <a href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:sensorboard">electrical testing of the Sensorboard</a> is recommended.</p>
+<p><img src="../images/pom_block_with_tubes.jpg"></p>
+<p>Press fit two short pieces (~15mm) of 3mm brass tube, seal the part against the PCB and attach it with 8pcs M2x16 screws. Sikaflex PUR based sealant works fine, don´t use silicone based products, it might damage the sensors. The sensorboard is mounted to the housing backplate by the barbed tube connectors, don´t forget to apply some sealant in the threads during assembly.</p>
+<p><img src="../images/sam_3093_cr.jpg"></p>
+<p>Two further rectangular blocks are needed to mount the RJ45-Board to the backplate of the OpenVario, but their dimensions are not really critical.</p>
+  </main>
+</body>
+</html>
