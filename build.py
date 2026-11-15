@@ -126,7 +126,9 @@ def main():
         page = page.replace('href="images/', 'href="../images/')
         text = page if page.endswith("\n") else page + "\n"
         (OUT / name).write_text(text)
-        (ROOT / name).unlink(missing_ok=True)
+        # The root index.html is the Pages redirect, not a generated page.
+        if name != "index.html":
+            (ROOT / name).unlink(missing_ok=True)
     for ref in re.findall(r'(?:src|href)="(images/[^"]+)"', layout):
         if not (ROOT / ref).is_file():
             missing.append(f"layout: {ref}")
