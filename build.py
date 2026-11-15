@@ -17,7 +17,7 @@ PAGES = [
     ("hardware.html", "The Flight Computer - Hardware | Openvario", "The Openvario flight computer boards: Cubieboard, display, adapter, sensors, and RJ45."),
     ("software.html", "The Flight Computer - Software | Openvario", "Openvario software: OpenEmbedded Linux, sensor and vario daemons, the boot menu, and XCSoar."),
     ("protocol.html", "The Flight Computer - OV Protocol | Openvario", "The OpenVario NMEA protocol used between the sensor daemon, vario daemon, and XCSoar."),
-    ("projects.html", "Projects | Openvario", "Projects page. It had no body text on openvario.de."),
+    ("projects.html", "Projects | Openvario", "Openvario projects."),
     ("download.html", "Download | Openvario", "Software images for Openvario, hosted on the project's GitHub page."),
     ("license.html", "License | Openvario", "Openvario licenses: GPLv3 for software and CC BY-SA for documentation and hardware files."),
     ("variants.html", "Variants | Openvario", "Display variants of the Openvario flight computer that have been built."),
