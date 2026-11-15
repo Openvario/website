@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Check the built pages
-        run: python3 build.py && git diff --exit-code
+        run: python3 hooks/pre-commit --all
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

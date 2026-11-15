@@ -26,7 +26,7 @@ def watches(path):
 
 
 def main():
-    if not any(watches(path) for path in staged()):
+    if "--all" not in sys.argv and not any(watches(path) for path in staged()):
         return
     build = subprocess.run([sys.executable, "build.py"], cwd=ROOT)
     if build.returncode:
