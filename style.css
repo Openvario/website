@@ -56,11 +56,19 @@ body {
 }
 
 header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: stretch;
+}
+
+header > a {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
   display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid #ddd;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: hsl(202, 100%, 76%);
 }
 
 header > a img {
@@ -68,18 +76,55 @@ header > a img {
   width: auto;
 }
 
-nav .top,
+nav {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+nav:has(.sub) {
+  grid-row: 1 / span 2;
+}
+
+nav .top {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.1rem;
+  margin: 0;
+  padding: 0.75rem 1.25rem 0.75rem 1.5rem;
+}
+
+nav:has(.sub)::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 2;
+  background: #f4f7f8;
+  border-top: 1px solid #dde3e7;
+}
+
 nav .sub {
+  grid-column: 2;
+  grid-row: 2;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 1.1rem;
   margin: 0;
-  padding: 0;
+  padding: 0.4rem 1.25rem 0.4rem 1.5rem;
+  background: #f4f7f8;
+  border-top: 1px solid #dde3e7;
+  font-size: 0.92rem;
 }
 
-nav .sub {
-  margin-top: 0.35rem;
+nav .sub a {
+  color: #3d4d58;
 }
 
 nav a {
@@ -92,6 +137,7 @@ nav a[aria-current="page"] {
   text-decoration: underline;
 }
 
+nav a.here,
 nav a[aria-current="page"] {
   font-weight: 700;
 }
@@ -120,6 +166,7 @@ img.align-left {
   max-width: 16rem;
 }
 
+main h1,
 main h2,
 main h3,
 main h4,
@@ -127,6 +174,10 @@ main h5,
 main h6 {
   clear: both;
   font-family: metropolis, sans-serif;
+}
+
+main h1 {
+  font-size: 1.5em;
 }
 
 main a {
