@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "html"
 
 PAGES = [
-    ("index.html", "Home | Openvario"),
+    ("index.html", "Welcome to Openvario | Openvario"),
     ("flight-computer.html", "The Flight Computer - Overview | Openvario"),
     ("mechanics.html", "The Flight Computer - Mechanics | Openvario"),
     ("hardware.html", "The Flight Computer - Hardware | Openvario"),

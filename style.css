@@ -1,9 +1,57 @@
+@font-face {
+  font-family: metropolis;
+  src: url("fonts/metropolis/Metropolis-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: metropolis;
+  src: url("fonts/metropolis/Metropolis-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: metropolis;
+  src: url("fonts/metropolis/Metropolis-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lora;
+  src: url("fonts/lora/lora-v14-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lora;
+  src: url("fonts/lora/lora-v14-latin-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lora;
+  src: url("fonts/lora/lora-v14-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   background: #fff;
   color: #1a1a1a;
   color-scheme: light;
-  font-family: system-ui, sans-serif;
+  font-family: metropolis, sans-serif;
   line-height: 1.5;
 }
 
@@ -52,6 +100,7 @@ main {
   max-width: 52rem;
   margin: 0 auto;
   padding: 1.5rem 1rem 3rem;
+  font-family: Lora, georgia, serif;
 }
 
 main::after {
@@ -77,6 +126,7 @@ main h4,
 main h5,
 main h6 {
   clear: both;
+  font-family: metropolis, sans-serif;
 }
 
 main a {
@@ -97,8 +147,14 @@ td {
   text-align: center;
 }
 
+td {
+  font-style: italic;
+}
+
 th {
   background: #eee;
+  font-family: metropolis, sans-serif;
+  font-style: normal;
 }
 
 code {
