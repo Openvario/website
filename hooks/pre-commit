@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+"""Refuse a commit whose staged HTML does not match the build."""
+
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def staged():
+    out = subprocess.check_output(
+        ["git", "diff", "--cached", "--name-only", "--diff-filter=ACMR"],
+        cwd=ROOT,
+        text=True,
+    )
+    return out.splitlines()
+
+
+def watches(path):
+    if path in ("layout.html", "build.py"):
+        return True
+    if path.startswith("content/") and path.endswith(".html"):
+        return True
+    return path.startswith("html/") and path.endswith(".html")
+
+
+def main():
+    if not any(watches(path) for path in staged()):
+        return
+    build = subprocess.run([sys.executable, "build.py"], cwd=ROOT)
+    if build.returncode:
+        sys.exit(build.returncode)
+    dirty = subprocess.run(["git", "diff", "--quiet", "--", "html"], cwd=ROOT)
+    untracked = subprocess.check_output(
+        ["git", "ls-files", "--others", "--exclude-standard", "--", "html"],
+        cwd=ROOT,
+        text=True,
+    ).strip()
+    if dirty.returncode or untracked:
+        sys.exit("html/ does not match the build. Stage the rebuilt pages.")
+
+
+if __name__ == "__main__":
+    main()

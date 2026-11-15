@@ -11,16 +11,52 @@ OUT = ROOT / "html"
 SITE = "https://openvario.de/html/"
 
 PAGES = [
-    ("index.html", "Welcome to Openvario | Openvario", "Openvario is a project that aims to create a high performance, open source flight computer."),
-    ("flight-computer.html", "The Flight Computer - Overview | Openvario", "A panel-mounted glide computer with a sunlight-readable display, for individuals and gliding clubs to build."),
-    ("mechanics.html", "The Flight Computer - Mechanics | Openvario", "Housing, 3D model, and pressure-tube connectors for the Openvario flight computer."),
-    ("hardware.html", "The Flight Computer - Hardware | Openvario", "The Openvario flight computer boards: Cubieboard, display, adapter, sensors, and RJ45."),
-    ("software.html", "The Flight Computer - Software | Openvario", "Openvario software: OpenEmbedded Linux, sensor and vario daemons, the boot menu, and XCSoar."),
-    ("protocol.html", "The Flight Computer - OV Protocol | Openvario", "The OpenVario NMEA protocol used between the sensor daemon, vario daemon, and XCSoar."),
+    (
+        "index.html",
+        "Welcome to Openvario | Openvario",
+        "Openvario is a project that aims to create a high performance, open source flight computer.",
+    ),
+    (
+        "flight-computer.html",
+        "The Flight Computer - Overview | Openvario",
+        "A panel-mounted glide computer with a sunlight-readable display, for individuals and gliding clubs to build.",
+    ),
+    (
+        "mechanics.html",
+        "The Flight Computer - Mechanics | Openvario",
+        "Housing, 3D model, and pressure-tube connectors for the Openvario flight computer.",
+    ),
+    (
+        "hardware.html",
+        "The Flight Computer - Hardware | Openvario",
+        "The Openvario flight computer boards: Cubieboard, display, adapter, sensors, and RJ45.",
+    ),
+    (
+        "software.html",
+        "The Flight Computer - Software | Openvario",
+        "Openvario software: OpenEmbedded Linux, sensor and vario daemons, the boot menu, and XCSoar.",
+    ),
+    (
+        "protocol.html",
+        "The Flight Computer - OV Protocol | Openvario",
+        "The OpenVario NMEA protocol used between the sensor daemon, vario daemon, and XCSoar.",
+    ),
     ("projects.html", "Projects | Openvario", "Openvario projects."),
-    ("download.html", "Download | Openvario", "Software images for Openvario, hosted on the project's GitHub page."),
-    ("license.html", "License | Openvario", "Openvario licenses: GPLv3 for software and CC BY-SA for documentation and hardware files."),
-    ("variants.html", "Variants | Openvario", "Display variants of the Openvario flight computer that have been built."),
+    (
+        "download.html",
+        "Download | Openvario",
+        "Software images for Openvario, hosted on the project's GitHub page.",
+    ),
+    (
+        "license.html",
+        "License | Openvario",
+        "Openvario licenses: GPLv3 for software and CC BY-SA for documentation and hardware files.",
+    ),
+    (
+        "variants.html",
+        "Variants | Openvario",
+        "Display variants of the Openvario flight computer that have been built.",
+    ),
 ]
 
 TOP = [

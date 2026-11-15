@@ -1,39 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Flight Computer - Hardware | Openvario</title>
-  <meta name="description" content="The Openvario flight computer boards: Cubieboard, display, adapter, sensors, and RJ45.">
-  <link rel="canonical" href="https://openvario.de/html/hardware.html">
-  <link rel="icon" href="../images/logo_0.png">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <header>
-    <a href="index.html"><img src="../images/logo_0.png" alt="Openvario"></a>
-    <nav aria-label="Main"><ul class="top"><li><a href="index.html">Home</a></li><li><a href="flight-computer.html" class="here">The Flight Computer</a></li><li><a href="projects.html">Projects</a></li><li><a href="download.html">Download</a></li><li><a href="license.html">License</a></li></ul><ul class="sub"><li><a href="flight-computer.html">Overview</a></li><li><a href="mechanics.html">Mechanics</a></li><li><a href="hardware.html" aria-current="page">Hardware</a></li><li><a href="software.html">Software</a></li><li><a href="protocol.html">OpenVario Protocol</a></li></ul></nav>
-  </header>
-  <main>
-<h1>Hardware Architecture</h1>
-<p>The block diagram below outlines the main building blocks of the Flight Computer's the hardware architecture.</p>
-<p><img src="../images/ov_series_0_blockdiagram.png" alt="Block diagram of the mainboard around a Cubieboard 2, connected to the display, remotes, RJ45 board, and sensor board"></p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Flight Computer - Hardware | Openvario</title>
+    <meta name="description" content="The Openvario flight computer boards: Cubieboard, display, adapter, sensors, and RJ45." />
+    <link rel="canonical" href="https://openvario.de/html/hardware.html" />
+    <link rel="icon" href="../images/logo_0.png" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="../images/logo_0.png" alt="Openvario" /></a>
+      <nav aria-label="Main"><ul class="top"><li><a href="index.html">Home</a></li><li><a href="flight-computer.html" class="here">The Flight Computer</a></li><li><a href="projects.html">Projects</a></li><li><a href="download.html">Download</a></li><li><a href="license.html">License</a></li></ul><ul class="sub"><li><a href="flight-computer.html">Overview</a></li><li><a href="mechanics.html">Mechanics</a></li><li><a href="hardware.html" aria-current="page">Hardware</a></li><li><a href="software.html">Software</a></li><li><a href="protocol.html">OpenVario Protocol</a></li></ul></nav>
+    </header>
+    <main><h1>Hardware Architecture</h1>
+<p>
+  The block diagram below outlines the main building blocks of the Flight
+  Computer's the hardware architecture.
+</p>
+<p>
+  <img
+    src="../images/ov_series_0_blockdiagram.png"
+    alt="Block diagram of the mainboard around a Cubieboard 2, connected to the display, remotes, RJ45 board, and sensor board"
+  />
+</p>
 <h2>Main components</h2>
 <h3>Processor board</h3>
-<p>The Cubieboard is a small and inexpensive development board based on Allwinner A10 and A20 processors. The current version of the flight computer uses Cubieboard 2 A20. Compared to the more famous Raspberry Pi the Cubieboard 2 offers a faster dual core processor and more interfaces for LCDs, sensors and UARTS. There is an active community developing Linux for Allwinner processors on <a href="http://linux-sunxi.org/">http://linux-sunxi.org/</a> More details about the Cubieboard can be found here: <a href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:cubieboard">Cubieboard</a></p>
-<p>A very detailed description of the Cubieboard can be found on <a href="http://cubieboard.org/">http://cubieboard.org/</a></p>
+<p>
+  The Cubieboard is a small and inexpensive development board based on Allwinner
+  A10 and A20 processors. The current version of the flight computer uses
+  Cubieboard 2 A20. Compared to the more famous Raspberry Pi the Cubieboard 2
+  offers a faster dual core processor and more interfaces for LCDs, sensors and
+  UARTS. There is an active community developing Linux for Allwinner processors
+  on <a href="http://linux-sunxi.org/">http://linux-sunxi.org/</a> More details
+  about the Cubieboard can be found here:
+  <a
+    href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:cubieboard"
+    >Cubieboard</a
+  >
+</p>
+<p>
+  A very detailed description of the Cubieboard can be found on
+  <a href="http://cubieboard.org/">http://cubieboard.org/</a>
+</p>
 <h3>Display</h3>
-<p>Pixel Qi displays offer very good sunlight readability at low power consumption. Currently PQ070W01, and PQ070W02 display are used . These 7 inch displays are coming at a resolution of 1024×600 pixel. They offer 18 bit colour depth in transmissive mode but also support transflective, and reflective modes at lower colour depth. While they are still available in the market, they don't seem to be built anymore. It is not an issue yet, however we will need to find a migration path to other displays in the future. Check out the realized <a href="https://www.openvario.org/doku.php?id=projects:series_00:variants">variants</a> here.</p>
+<p>
+  Pixel Qi displays offer very good sunlight readability at low power
+  consumption. Currently PQ070W01, and PQ070W02 display are used . These 7 inch
+  displays are coming at a resolution of 1024×600 pixel. They offer 18 bit
+  colour depth in transmissive mode but also support transflective, and
+  reflective modes at lower colour depth. While they are still available in the
+  market, they don't seem to be built anymore. It is not an issue yet, however
+  we will need to find a migration path to other displays in the future. Check
+  out the realized
+  <a href="https://www.openvario.org/doku.php?id=projects:series_00:variants"
+    >variants</a
+  >
+  here.
+</p>
 <h3>Adapter board</h3>
 <p>The adapter board serves the following functions:</p>
 <ul>
-  <li>provide power for display, processor board, RJ45 connectors and extension connectors</li>
-  <li>interface the Cubieboard LCD connectors to a FPC with correct pinout for the Pixel Qi Display</li>
+  <li>
+    provide power for display, processor board, RJ45 connectors and extension
+    connectors
+  </li>
+  <li>
+    interface the Cubieboard LCD connectors to a FPC with correct pinout for the
+    Pixel Qi Display
+  </li>
   <li>interface a resistive touchscreen to Cubieboard connectors</li>
   <li>convert TTL to RS232 levels for UARTS</li>
   <li>provide I2C, SPI, GPIO and power at extension connectors</li>
-  <li>comes with an AD-converter for battery voltage indication via I2C</li></ul>
-<p>More details about the Adapterboard can be found here: <a href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:adapterboard">Electrical Tests Adapterboard</a></p>
+  <li>comes with an AD-converter for battery voltage indication via I2C</li>
+</ul>
+<p>
+  More details about the Adapterboard can be found here:
+  <a
+    href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:adapterboard"
+    >Electrical Tests Adapterboard</a
+  >
+</p>
 <h3>Sensor board</h3>
 <p>The sensor board provides the following sensors to the flight computer:</p>
 <ul>
@@ -43,16 +91,31 @@
   <li>3D acceleration</li>
   <li>3D gyros</li>
   <li>3D magnetometer</li>
-  <li>air temperature (connector for external sensor)</li></ul>
+  <li>air temperature (connector for external sensor)</li>
+</ul>
 <p>Additional features are:</p>
 <ul>
   <li>connector for optional additional I2C sensors</li>
   <li>audio amplifier</li>
   <li>I2C to single wire bridge</li>
-  <li>I2C EEPROM for calibration data</li></ul>
-<p>More details about the Sensorboard can be found here: <a href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:sensorboard">Electrical Tests Sensorboard</a></p>
+  <li>I2C EEPROM for calibration data</li>
+</ul>
+<p>
+  More details about the Sensorboard can be found here:
+  <a
+    href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:sensorboard"
+    >Electrical Tests Sensorboard</a
+  >
+</p>
 <h3>RJ45 board</h3>
-<p>The RJ45 board provides four UARTS on RJ45 sockets with IGC compatible pin out. Each of the sockets power supplies is protected by an individual, self resetting fuse. More details about the RJ45-Board can be found here: <a href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:rj45-board">Electrical Tests RJ45-Board</a></p>
-  </main>
-</body>
+<p>
+  The RJ45 board provides four UARTS on RJ45 sockets with IGC compatible pin
+  out. Each of the sockets power supplies is protected by an individual, self
+  resetting fuse. More details about the RJ45-Board can be found here:
+  <a
+    href="https://www.openvario.org/doku.php?id=projects:series_00:electrical_tests:rj45-board"
+    >Electrical Tests RJ45-Board</a
+  >
+</p></main>
+  </body>
 </html>
