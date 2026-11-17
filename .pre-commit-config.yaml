@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.10.1
+    hooks:
+      - id: prettier
+        types_or: [html, css, markdown, yaml]
+        exclude: ^html/
+  - repo: local
+    hooks:
+      - id: html-build
+        name: HTML build check
+        entry: python3 hooks/pre-commit --all
+        language: system
+        pass_filenames: false
+        files: ^(content/.*\.html|html/.*\.html|layout\.html|build\.py)$
