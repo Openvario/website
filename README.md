@@ -1,6 +1,6 @@
 # OpenVario website
 
-https://lordfolken.github.io/openvario-website/
+https://test.openvario.de/
 
 Static site. Page text is in `content/`. The shared header and nav are `layout.html`. Looks are `style.css`. Pictures are in `images/`.
 
